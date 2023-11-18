@@ -1,0 +1,180 @@
+body{
+    background-color:#fefefe ;
+    margin: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 50;
+}
+
+nav{
+    background-color: #cea1a1;
+    color: white;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    justify-content: center;
+    height: 100px;
+    border-radius: 60;
+
+}
+
+
+nav ul {
+    
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-items: center;
+    border-radius: 30;
+}
+
+nav li {
+    margin-right: 70px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+nav button {
+    background-color: rgb(241, 235, 235);
+   
+    border: 1 solid rgb(17, 10, 10);
+    padding: 6px;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    border-radius: 30;
+}
+nav button:hover{
+    background-color: #ccd6eb;
+    color:#ffffff
+}
+
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+
+
+.product-name {
+    font-size: 20px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.product-stock {
+    color: #c0d0ba;
+    font-size: 14px;
+    margin-top: 5%;
+    text-align: center;
+}
+
+.product-image {
+    max-width: 80%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.theMassage{
+    text-align: center;
+    font-size: larger;
+    font-weight: bold;
+    color: #2d2222;
+}
+
+.product-price {
+    font-weight: bold;
+    color: #ffffff;
+    margin-top: 10px;
+    text-align: center;
+    border-radius: 30;
+}
+
+.product-item {
+    padding: 20px;
+    width: 200px;
+    margin: 10px;
+    background-color: #433239;
+    
+   
+}
+
+
+.add-to-cart-button {
+    width: 100%;
+    background-color: #a08585;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    border-radius: 30;
+}
+
+.add-to-cart-button:hover {
+    background-color: #886c5c;
+}
+.slut-text{ 
+    font-weight: bold;
+}
+
+.search-form {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    border-radius: 30;
+}
+
+button:disabled , button:disabled:hover{
+    background-color:black ;
+    color: rgb(255, 255, 255);
+    border-radius: 30;
+}
+
+.search-input {
+    flex: 1;
+   
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+
+.search-button {
+    background-color: rgb(138, 92, 92);
+    margin-left: 4px;
+    color: #fff;
+    padding: 10px 16px;
+    font-size: 16px;
+    border: none;
+    border-radius: 30;
+    cursor: pointer;
+}
+
+.add-to-cart-button[disabled] {
+    background-color: lightgray;
+    cursor: not-allowed;
+}
+.cart-view{
+text-align: center;
+}
+
+.cart-view ul {
+    text-align: center;
+    background-color: #d8d6d6;
+    padding: 20px;
+}
+
+    

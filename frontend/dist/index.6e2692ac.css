@@ -1,0 +1,163 @@
+body {
+  background-color: #fefefe;
+  margin: 30px;
+  font-family: Franklin Gothic Medium, Arial Narrow, Arial, sans-serif;
+}
+
+nav {
+  color: #fff;
+  background-color: #4d513d;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  padding: 5px;
+  display: flex;
+}
+
+nav ul {
+  justify-items: center;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+nav li {
+  margin-right: 70px;
+}
+
+nav a {
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+nav button {
+  color: #897a7a;
+  background-color: #f1ebeb;
+  border: 1px solid #110a0a;
+  padding: 6px;
+  font-size: 20px;
+  transition: transform .3s;
+  box-shadow: 0 3px 6px #0000001a;
+}
+
+nav button:hover {
+  color: #d8d6d6;
+  background-color: #62885c;
+}
+
+.theMassage {
+  text-align: center;
+  color: #2d2222;
+  font-size: larger;
+  font-weight: bold;
+}
+
+.product-list {
+  flex-wrap: wrap;
+  padding: 20px;
+  display: flex;
+}
+
+.product-item {
+  background-color: #344332;
+  width: 200px;
+  margin: 10px;
+  padding: 20px;
+}
+
+.product-name {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+.product-image {
+  max-width: 80%;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+
+.product-price {
+  color: #333;
+  text-align: center;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.product-stock {
+  color: #888;
+  text-align: center;
+  margin-top: 5%;
+  font-size: 14px;
+}
+
+.add-to-cart-button {
+  color: #fff;
+  cursor: pointer;
+  background-color: #7e7f83;
+  border: none;
+  width: 100%;
+  margin: 0 auto;
+  padding: 10px 15px;
+  display: block;
+}
+
+.add-to-cart-button:hover {
+  background-color: #886c5c;
+}
+
+.slut-text {
+  font-weight: bold;
+}
+
+.search-form {
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+  display: flex;
+}
+
+button:disabled, button:disabled:hover {
+  color: gray;
+  background-color: #000;
+}
+
+.search-input {
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.search-button {
+  color: #fff;
+  cursor: pointer;
+  background-color: #868484;
+  border: none;
+  border-radius: 4px;
+  margin-left: 4px;
+  padding: 10px 16px;
+  font-size: 16px;
+}
+
+.add-to-cart-button[disabled] {
+  cursor: not-allowed;
+  background-color: #d3d3d3;
+}
+
+.cart-view {
+  text-align: center;
+}
+
+.cart-view ul {
+  text-align: center;
+  background-color: #d8d6d6;
+  padding: 20px;
+}
+
+/*# sourceMappingURL=index.6e2692ac.css.map */

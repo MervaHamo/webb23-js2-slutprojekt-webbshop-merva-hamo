@@ -1,0 +1,23 @@
+{
+  "name": "frontend-slutprojekt-2",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "parcel ./src/index.html",
+    "clean": "del-cli ./dist ./.parcel-cache",
+    "build": "parcel build ./src/index.html --public-url ./ --dist-dir build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "del-cli": "^5.1.0",
+    "parcel": "^2.10.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "express": "^4.18.2",
+    "process": "^0.11.10"
+  },
+  "description": ""
+}
