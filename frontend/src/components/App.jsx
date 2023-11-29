@@ -65,62 +65,63 @@ function App() {
   };
 
   const checkout = () => {
-    const updatedToCart = [...cart];
-    let purchaseSuccessful = true;
+  const updatedToCart = [...cart];
+  let purchaseSuccessful = true;
 
-    updatedToCart.forEach((item) => {
-      const productIndex = products.findIndex((product) => product.id === item.id);
-      if (productIndex !== -1) {
-        if (products[productIndex].stock >= item.quantity) {
-          products[productIndex].stock -= item.quantity;
-        } else {
-          purchaseSuccessful = false;
-        }
+  updatedToCart.forEach((item) => {
+    const productIndex = products.findIndex((product) => product.id === item.id);
+    if (productIndex !== -1) {
+      if (products[productIndex].stock >= item.quantity) {
+        products[productIndex].stock -= item.quantity;
+      } else {
+        purchaseSuccessful = false;
       }
-    });
+    }
+  });
 
-    const purchaseData = {
-      items: updatedToCart.map((item) => {
-        return {
-          id: item.id,
-          quantity: item.quantity,
-        };
-      }),
-      totalPrice: updatedToCart.reduce(
-        (total, item) => total + item.price * item.quantity,0 ),
-    };
+  if (purchaseSuccessful) {
+    // Update product list immediately
+    updateProductList();
+  }
 
-    fetch('http://localhost:3000/api/purchase', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(purchaseData),
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        if (data.message === ' ! ') {
-          
-          setCartItemCount(0);
-          setCart([]);
-          setMessage( ' Sorry to see ypu cancelled your payment!. ');
-
-          
-          setTimeout(() => {
-            setMessage(''); 
-            setMainPage('products'); 
-            updateProductList();
-          }, 3000);
-        }
-         else {
-          setMessage('Thank you for the purchase!');
-        }
-      })
-      .catch((error) => {
-        console.error('Error', error);
-        setMessage(' fel vid köpet');
-      });
+  const purchaseData = {
+    items: updatedToCart.map((item) => {
+      return {
+        id: item.id,
+        quantity: item.quantity,
+      };
+    }),
+    totalPrice: updatedToCart.reduce((total, item) => total + item.price * item.quantity, 0),
   };
+
+  fetch('http://localhost:3000/api/purchase', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(purchaseData),
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      if (data.message === ' ! ') {
+        setCartItemCount(0);
+        setCart([]);
+        setMessage('Sorry to see you cancelled your payment!');
+
+        setTimeout(() => {
+          setMessage('');
+          setMainPage('products');
+        }, 3000);
+      } else {
+        setMessage('Thank you for the purchase!');
+      }
+    })
+    .catch((error) => {
+      console.error('Error', error);
+      setMessage('Error during purchase');
+    });
+};
+
 
   const emptyTheCart = () => {
     const productsAndUpdateStock = products.map((product) => {
