@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const fs = require('fs');
+
 app.use(express.json());
 app.use(function (req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
